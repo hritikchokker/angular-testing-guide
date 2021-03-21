@@ -25,6 +25,11 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.version).toEqual(VERSION);
   });
+  it('should have a test variable to be hritik', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.test).toMatch('hritik');
+  });
 
   // it(`should have as title 'test-guide'`, () => {
   //   const fixture = TestBed.createComponent(AppComponent);

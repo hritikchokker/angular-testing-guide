@@ -1,4 +1,7 @@
-import { Component, VERSION } from '@angular/core';
+import {
+  Component,
+  VERSION
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +11,5 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   title = 'test-guide';
   version = VERSION;
+  test = 'hritik';
 }
