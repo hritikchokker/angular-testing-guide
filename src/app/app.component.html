@@ -1,5 +1,8 @@
+<h1>{{title}}</h1>
 <div class="container">
   <h1>
     Testing Guide to Angular version {{version?.full}}
   </h1>
 </div>
+
+<app-title (changeTitleEvent)="changeTitle($event)" [message]='inputMessage'></app-title>

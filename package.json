@@ -10,6 +10,7 @@
     "test:custom": "npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "e2e:custom": "npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js",
     "e2e": "ng e2e",
+    "coverage-report": "ng test --no-watch --code-coverage",
     "postinstall": "ngcc"
   },
   "private": true,

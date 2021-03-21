@@ -12,4 +12,9 @@ export class AppComponent {
   title = 'test-guide';
   version = VERSION;
   test = 'hritik';
+  inputMessage = 'Message to Title component';
+
+  changeTitle(newTitle: string) {
+    this.title = newTitle;
+  }
 }
