@@ -7,6 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "test:custom": "npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "e2e:custom": "npm run e2e -- --protractor-config=e2e/protractor.conf.js",
     "e2e": "ng e2e",
     "postinstall": "ngcc"
   },
