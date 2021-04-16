@@ -14,7 +14,7 @@ export class AppComponent {
   test = 'hritik';
   inputMessage = 'Message to Title component';
 
-  changeTitle(newTitle: string) {
+  changeTitle(newTitle: string): void {
     this.title = newTitle;
   }
 }
