@@ -13,7 +13,7 @@ export class AppComponent {
   version = VERSION;
   test = 'hritik';
   inputMessage = 'Message to Title component';
-
+  testVar = 'hell';
   changeTitle(newTitle: string): void {
     this.title = newTitle;
   }
