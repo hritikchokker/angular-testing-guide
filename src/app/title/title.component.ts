@@ -16,7 +16,7 @@ import {
 export class TitleComponent implements OnInit {
 
   @Input() message!: string;
-  @Output() changeTitleEvent: EventEmitter<string> = new EventEmitter(); //2
+  @Output() changeTitleEvent: EventEmitter<string> = new EventEmitter(); // 2
 
   @ViewChild('titleField', { static: false }) titleField!: ElementRef;
 
@@ -25,7 +25,7 @@ export class TitleComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleButtonClick(newTitle: string) {
+  handleButtonClick(newTitle: string): void {
     if (newTitle) {
       this.changeTitleEvent.emit(newTitle);
       this.titleField.nativeElement.value = '';

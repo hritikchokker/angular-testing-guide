@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/testing-guide
     docker:
-      - image: chokkerhritik/angular-testing-guide-docker
+      - image: circleci/node:10-browsers
     steps:
       - checkout
       - restore_cache:
