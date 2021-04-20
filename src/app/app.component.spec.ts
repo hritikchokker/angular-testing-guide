@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TestBed } from '@angular/core/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -25,11 +25,14 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('angular-testing-guide');
   });
-
-  it('should render title', () => {
+  it('should add two numbers', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-testing-guide app is running!');
-  });
+    const app = fixture.componentInstance;
+    expect(app.addTwoNumber(10, 20)).toEqual(30);
+  })
+  it('sholud have a message for app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.message).toBe('This Project also demonstrates CI/CD (circleCI) pipelines and docker intergration in angular Project');
+  })
 });
