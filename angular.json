@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "ed6498c9-4ba0-4278-b9a1-e9d9dc645340"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-guide": {
+    "angular-testing-guide": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-guide",
+            "outputPath": "dist/angular-testing-guide",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "test-guide:build"
+            "browserTarget": "angular-testing-guide:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test-guide:build:production"
+              "browserTarget": "angular-testing-guide:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-guide:build"
+            "browserTarget": "angular-testing-guide:build"
           }
         },
         "test": {
@@ -92,7 +89,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "codeCoverage": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -120,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "test-guide:serve"
+            "devServerTarget": "angular-testing-guide:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "test-guide:serve:production"
+              "devServerTarget": "angular-testing-guide:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "test-guide"
+  "defaultProject": "angular-testing-guide"
 }

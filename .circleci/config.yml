@@ -1,16 +1,16 @@
-version: 2.1
+version: 2
 jobs:
   build:
-    working_directory: ~/testing-guide
+    working_directory: ~/angular-testing-guide
     docker:
       - image: circleci/node:10-browsers
     steps:
       - checkout
       - restore_cache:
-          key: testing-guide-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
       - save_cache:
-          key: testing-guide-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
       - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI

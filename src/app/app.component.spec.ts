@@ -1,8 +1,6 @@
-import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed } from '@angular/core/testing';
-import { TitleComponent } from './title/title.component';
-import { VERSION } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,8 +9,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent,
-        TitleComponent
+        AppComponent
       ],
     }).compileComponents();
   });
@@ -20,29 +17,19 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    // const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
-  it(`should have app version to be ${VERSION.full}`, () => {
+
+  it(`should have as title 'angular-testing-guide'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.version).toEqual(VERSION);
-  });
-  it('should have a test variable to be hritik', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.test).toMatch('hritik');
+    expect(app.title).toEqual('angular-testing-guide');
   });
 
-  it(`should have as title 'test-guide'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('test-guide');
-  });
-  it(`should render a title in a  h1 tag`, () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('test-guide');
-  })
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-testing-guide app is running!');
+  });
 });
