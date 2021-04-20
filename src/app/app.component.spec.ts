@@ -19,12 +19,6 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  it(`should have as title 'angular-testing-guide'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-testing-guide');
-  });
   it('should add two numbers', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
