@@ -1,0 +1,16 @@
+.main-img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+picture {
+  text-align: center;
+  img {
+    max-width: 200px;
+    max-height: 250px;
+    border-radius: 50%;
+  }
+}
+mat-card {
+  background-color: rgb(182, 222, 230);
+}

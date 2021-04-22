@@ -24,6 +24,9 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/angular-testing-guide",
+            "allowedCommonJsDependencies": [
+              "faker"
+            ],
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -97,6 +101,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []

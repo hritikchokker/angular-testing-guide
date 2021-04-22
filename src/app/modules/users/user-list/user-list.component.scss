@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  app-user-card {
+    margin: 10px;
+  }
+  app-user-card:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease;
+  }
+}
+
+h1 {
+  text-align: center;
+}
