@@ -2,6 +2,7 @@ import * as faker from 'faker';
 
 import { Component, OnInit } from '@angular/core';
 
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { USERS } from 'src/app/shared/data/users.list.mock';
 import { UsersService } from '../service/users.service';
@@ -12,12 +13,17 @@ import { UsersService } from '../service/users.service';
   styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent implements OnInit {
+  [x: string]: any;
 
   // tslint:disable-next-line: variable-name
-  userList = USERS;
-  constructor(private _userService: UsersService) { }
+  userList$!: Observable<any[]>;
+  constructor(private _userService: UsersService) {
+  }
+
   usersList$!: Observable<any[]>;
   ngOnInit(): void {
+    this.userList$ = this._userService.getUsers();
+
   }
 
 

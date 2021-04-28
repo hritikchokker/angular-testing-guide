@@ -33,11 +33,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    UsersComponent,
     UserListComponent,
     UserDetailComponent,
     EditUserComponent,
     UserCardComponent,
-    UsersComponent
   ],
   imports: [
     CommonModule,

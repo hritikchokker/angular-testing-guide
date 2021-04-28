@@ -19,7 +19,7 @@ export const USERS = [
       catchPhrase: 'Multi-layered client-server neural-net',
       bs: 'harness real-time e-markets',
     },
-    image: 'http://placeimg.com/640/480/business',
+    image: 'https://placeimg.com/640/480/business',
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const USERS = [
       catchPhrase: 'Proactive didactic contingency',
       bs: 'synergize scalable supply-chains',
     },
-    image: 'http://placeimg.com/640/480/city',
+    image: 'https://placeimg.com/640/480/city',
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ export const USERS = [
       catchPhrase: 'Face to face bifurcated interface',
       bs: 'e-enable strategic applications',
     },
-    image: 'http://placeimg.com/640/480/technics',
+    image: 'https://placeimg.com/640/480/technics',
   },
   {
     id: 4,
@@ -82,7 +82,7 @@ export const USERS = [
       catchPhrase: 'Multi-tiered zero tolerance productivity',
       bs: 'transition cutting-edge web services',
     },
-    image: 'http://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/nature',
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ export const USERS = [
       catchPhrase: 'User-centric fault-tolerant solution',
       bs: 'revolutionize end-to-end systems',
     },
-    image: 'http://placeimg.com/640/480/business',
+    image: 'https://placeimg.com/640/480/business',
   },
   {
     id: 6,
@@ -124,7 +124,7 @@ export const USERS = [
       catchPhrase: 'Synchronised bottom-line interface',
       bs: 'e-enable innovative applications',
     },
-    image: 'http://placeimg.com/640/480/nature',
+    image: 'https://placeimg.com/640/480/nature',
   },
   {
     id: 7,
@@ -145,7 +145,7 @@ export const USERS = [
       catchPhrase: 'Configurable multimedia task-force',
       bs: 'generate enterprise e-tailers',
     },
-    image: 'http://placeimg.com/640/480/food',
+    image: 'https://placeimg.com/640/480/food',
   },
   {
     id: 8,
@@ -166,7 +166,7 @@ export const USERS = [
       catchPhrase: 'Implemented secondary concept',
       bs: 'e-enable extensible e-tailers',
     },
-    image: 'http://placeimg.com/640/480/business',
+    image: 'https://placeimg.com/640/480/business',
   },
   {
     id: 9,
@@ -187,7 +187,7 @@ export const USERS = [
       catchPhrase: 'Switchable contextually-based project',
       bs: 'aggregate real-time technologies',
     },
-    image: 'http://placeimg.com/640/480/sports',
+    image: 'https://placeimg.com/640/480/sports',
   },
   {
     id: 10,
@@ -208,6 +208,6 @@ export const USERS = [
       catchPhrase: 'Centralized empowering task-force',
       bs: 'target end-to-end models',
     },
-    image: 'http://placeimg.com/640/480/cats',
+    image: 'https://placeimg.com/640/480/cats',
   },
 ];

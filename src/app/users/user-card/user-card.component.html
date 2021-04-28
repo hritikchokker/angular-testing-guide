@@ -15,7 +15,6 @@
     <button [routerLink]="['/users/edit',user?.id]" mat-raised-button>Edit</button>
     <button color="primary" *ngIf="!isDetails" [routerLink]="['/users',user?.id]" mat-raised-button>View
       Details</button>
-
   </mat-card-actions>
   <mat-card-footer>
     {{user?.company?.catchPhrase}}

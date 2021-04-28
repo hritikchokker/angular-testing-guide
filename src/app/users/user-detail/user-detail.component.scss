@@ -1,0 +1,20 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details-container {
+  margin-top: 20px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  app-user-card {
+    text-align: center;
+    width: 500px;
+  }
+  app-user-card:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease;
+  }
+}

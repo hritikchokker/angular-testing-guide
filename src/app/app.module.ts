@@ -3,6 +3,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { LayoutsModule } from './shared/layouts/layouts.module';
 import { NgModule } from '@angular/core';
 
@@ -14,6 +16,7 @@ import { NgModule } from '@angular/core';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     LayoutsModule,
     BrowserAnimationsModule,
   ],

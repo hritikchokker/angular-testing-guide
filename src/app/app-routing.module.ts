@@ -1,15 +1,27 @@
-import { RouterModule, Routes } from '@angular/router';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
 
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'users',
+    pathMatch: 'full'
+  },
+  {
     path: 'users',
-    loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule)
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   },
   {
     path: '**',
-    loadChildren: () => import('./modules/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
   }
 ];
 
