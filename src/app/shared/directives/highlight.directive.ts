@@ -11,7 +11,7 @@ export class HighlightDirective {
     } else {
       this.$elementRef.nativeElement.style.color = 'black';
     }
-  };
+  }
   constructor(private $elementRef: ElementRef<HTMLAnchorElement>) {
     this.$elementRef.nativeElement.style.cursor = 'pointer';
   }

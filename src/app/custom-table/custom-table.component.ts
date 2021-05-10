@@ -35,14 +35,14 @@ export class CustomTableComponent implements OnInit {
   selection = new SelectionModel<PeriodicElement>(true, []);
 
   /** Whether the number of selected elements matches the total number of rows. */
-  isAllSelected() {
+  isAllSelected(): boolean {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
-  masterToggle() {
+  masterToggle(): void {
     this.isAllSelected() ?
       this.selection.clear() :
       this.dataSource.data.forEach(row => this.selection.select(row));
@@ -55,7 +55,7 @@ export class CustomTableComponent implements OnInit {
       if (el.position === position) {
         el.isActive = !el.isActive;
       }
-    })
+    });
   }
 
   /** The label for the checkbox on the passed row */
