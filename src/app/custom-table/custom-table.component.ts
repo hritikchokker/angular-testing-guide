@@ -8,20 +8,21 @@ export interface PeriodicElement {
   position: number;
   weight: number;
   symbol: string;
+  additionalValue: string;
   isActive: boolean;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', isActive: false },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', isActive: false },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', isActive: false },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be', isActive: false },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B', isActive: false },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C', isActive: false },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N', isActive: false },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O', isActive: false },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F', isActive: false },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne', isActive: false },
+  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', isActive: false, additionalValue: 'Random Text' },
+  { position: 2, name: '', weight: 4.0026, symbol: 'He', isActive: false, additionalValue: 'dummyVal' },
+  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', isActive: false, additionalValue: '' },
+  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be', isActive: false, additionalValue: 'Answer' },
+  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B', isActive: false, additionalValue: 'dummyVal' },
+  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C', isActive: false, additionalValue: '' },
+  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N', isActive: false, additionalValue: 'Test' },
+  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O', isActive: false, additionalValue: '' },
+  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F', isActive: false, additionalValue: 'dummyVal' },
+  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne', isActive: false, additionalValue: '' },
 ];
 
 @Component({
@@ -30,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./custom-table.component.scss']
 })
 export class CustomTableComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'Active'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'Active', 'Pipe Transform Text'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
 

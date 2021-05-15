@@ -7,7 +7,6 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { LayoutsModule } from './shared/layouts/layouts.module';
 import { NgModule } from '@angular/core';
-
 @NgModule({
   declarations: [
     AppComponent

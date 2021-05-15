@@ -1,4 +1,4 @@
-<h2>Table with dummy data (Testing Directive)</h2>
+<h2>Table with dummy data (Testing Directive and Pipes)</h2>
 <div class="table-container">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- Checkbox Column -->
@@ -44,6 +44,15 @@
         <a (click)="toggleEl(element?.position)" appHighlight [details]="element?.isActive" color="primary">
           {{!element?.isActive?'Highlight':'Remove Highlight'}}
         </a>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="Pipe Transform Text">
+      <th mat-header-cell *matHeaderCellDef> Active </th>
+      <td mat-cell *matCellDef="let element">
+        <p>{{element?.additionalValue |nullcheck }}</p>
+        <!-- <a (click)="toggleEl(element?.additionalValue)" appHighlight [details]="element?.isActive" color="primary">
+          {{!element?.isActive?'Highlight':'Remove Highlight'}}
+        </a> -->
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
